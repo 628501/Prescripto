@@ -3,7 +3,7 @@ import React from 'react'
 const App = () => {
   return (
     <div>
-      Hi karthi
+      Hi karthi This is thiru
     </div>
   )
 }
