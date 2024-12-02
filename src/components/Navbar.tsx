@@ -1,83 +1,35 @@
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
+import CssBaseline from '@mui/material/CssBaseline';
+import Divider from '@mui/material/Divider';
 import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import { assets } from '../assets/assets_frontend/assets';
-import { Divider, Typography } from '@mui/material';
+import { assets } from '../assets/assets_admin/assets';
 
-const Navbar = () => {
+export default function Navbar() {
+
   return (
-    <Box
-      position="sticky"
-      sx={{
-        width: '100%',
-        zIndex: '1'
-      }}
-    >
-      <AppBar
-        position="static"
-        sx={{
-          backgroundColor: "white",
-          color: "blue",
-          boxShadow: "none",
-        }}
-      >
-        <Toolbar
-          sx={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-          }}
-        >
-          <IconButton
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{
-              mr: 2,
-              display: "flex",
-              alignItems: "center",
-            }}
-            disableRipple
-            disableFocusRipple
-            disableTouchRipple
+    <Box sx={{ display: 'flex' }}>
+      <CssBaseline />
+      <AppBar component="nav" sx={{zIndex:"2" , boxShadow:"none" , background:"white" , color:"black" }}>
+        <Toolbar >
+          <Typography
+            sx={{ flexGrow: 1 , width:"150px"}}
           >
-            <img
-              src={assets.logo}
-              alt="Logo"
-              style={{ width: "160px" }}
-            />
-            <Typography
-              sx={{
-                border:"1px solid",
-                borderRadius: "30px",
-                fontSize:"12px",
-                paddingX: "2px",
-                color: "#6B7280",
-                borderColor: "#6B7280",
-                marginLeft: "10px",
-              }}
-            >
-              Admin
-            </Typography>
-          </IconButton>
-          <Button
-            variant="contained"
-            disableElevation
-            sx={{
-              background: "#5F6FFF",
-              borderRadius: "30px",
-              textTransform: "none",
-            }}
-          >
-            Create Account
-          </Button>
+           <img src={assets.admin_logo} alt=""  style={{width:"160px" }}/>
+          </Typography>
+          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+              <Button variant='contained' sx={{background:'#5F6FFF' , paddingX:"30px" , borderRadius:"30px"}}>
+                Logout
+              </Button>
+          </Box>
         </Toolbar>
-      </AppBar>
       <Divider />
+      </AppBar>
+      <nav>
+      </nav>
+
     </Box>
   );
-};
-
-export default Navbar;
+}

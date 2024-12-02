@@ -1,8 +1,8 @@
+import React from 'react'
+
 const AddDoctor = () => {
-    console.log("ADD doctor");
-    
   return (
-    <div>AddDoctor</div>
+    <div>Add Doctor</div>
   )
 }
 
