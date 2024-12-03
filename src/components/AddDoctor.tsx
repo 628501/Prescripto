@@ -1,8 +1,8 @@
-import React from 'react'
+import { Typography } from "@mui/material"
 
 const AddDoctor = () => {
   return (
-    <div>Add Doctor</div>
+    <Typography variant="h5" >Add Doctor</Typography>
   )
 }
 
