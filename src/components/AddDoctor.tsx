@@ -1,4 +1,3 @@
-import { Typography } from "@mui/material"
 import {
   Box,
   IconButton,
@@ -19,16 +18,16 @@ const AddDoctor = () => {
   const {
     control,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<FieldValues>({
     defaultValues: {
       speciality: "",
-      experience: ""
-
+      experience: "",
     },
   });
 
-  const [url,setUrl] = useState<string | undefined>("");
+  const [url, setUrl] = useState<string | undefined>("");
 
   const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
@@ -39,13 +38,13 @@ const AddDoctor = () => {
   };
 
   const onSubmit = (data: FieldValues) => {
+    reset();
+    setUrl("");
     console.log("Form Data:", data);
+    
   };
 
   return (
-    <Typography variant="h5" >Add Doctor</Typography>
-  )
-}
     <Box
       sx={{
         padding: "50px",
@@ -60,6 +59,8 @@ const AddDoctor = () => {
         msOverflowStyle: "none",
       }}
     >
+      <Typography variant="h5">Add Doctor</Typography>
+
       <Box sx={{ display: "flex", alignItems: "center" }}>
         <label htmlFor="file-input">
           <IconButton
