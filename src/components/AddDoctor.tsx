@@ -45,6 +45,8 @@ const AddDoctor = () => {
   };
 
   return (
+    <>
+    <Typography variant="h6" sx={{marginBottom:"15px"}}>Add Doctor</Typography>
     <Box
       sx={{
         padding: "50px",
@@ -53,13 +55,13 @@ const AddDoctor = () => {
         overflowY: "auto",
         border: "1px solid lightgray",
         borderRadius: "4px",
+        background:"white"
       }}
       style={{
         scrollbarWidth: "none",
         msOverflowStyle: "none",
       }}
     >
-      <Typography variant="h5">Add Doctor</Typography>
 
       <Box sx={{ display: "flex", alignItems: "center" }}>
         <label htmlFor="file-input">
@@ -302,6 +304,7 @@ const AddDoctor = () => {
         </Button>
       </Box>
     </Box>
+    </>
   );
 };
 

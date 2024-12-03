@@ -15,7 +15,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 const drawerWidth = 280;
 const Sidebar = () => {
-  
+
   const [selected, setSelected] = useState<string | undefined>("");
 
   return (
@@ -36,7 +36,7 @@ const Sidebar = () => {
       >
         <Toolbar />
         <Divider />
-        <List>
+        <List >
           <Link
             to="dashboard"
             style={{ textDecoration: "none", color: "black" }}
@@ -73,10 +73,10 @@ const Sidebar = () => {
               }}
             >
               <ListItemButton onClick={() => setSelected("appointments")}>
-                <ListItemIcon>
+                <ListItemIcon >
                   <CalendarMonthOutlinedIcon />
                 </ListItemIcon>
-                <ListItemText primary="Appointments" sx={{ color: "gray" }} />
+                <ListItemText  primary="Appointments" sx={{ color: "gray" }} />
               </ListItemButton>
             </ListItem>
           </Link>

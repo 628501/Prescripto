@@ -3,7 +3,7 @@ import { Typography } from "@mui/material";
 const Dashboard = () => {
   return (
     <>
-      <Typography variant="h5">Dashboard</Typography>
+      <Typography variant="h6" sx={{marginBottom:"15px"}}>Dashboard</Typography>
       <Typography>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et, fugiat
         doloribus vitae voluptates quisquam ut veritatis facilis iste rem
