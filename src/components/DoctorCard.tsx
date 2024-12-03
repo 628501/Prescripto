@@ -1,4 +1,3 @@
-import * as React from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -32,12 +31,12 @@ export default function DoctorCard({ doctors }: Doc) {
         <Grid item xs={12} sm={6} md={4} lg={2} key={doctor._id}>
           <Card
             sx={{
-              maxWidth: 230,
+              maxWidth: 250,
               boxShadow: "0px 0px 0px 1px #C9D8FF",
-              borderRadius: "10px",
+              borderRadius: "10px"
             }}
           >
-            <CardActionArea disableRipple>
+            <CardActionArea disableTouchRipple disableRipple >
               <CardMedia
                 component="img"
                 height="200"
@@ -51,9 +50,8 @@ export default function DoctorCard({ doctors }: Doc) {
                   },
                 }}
               />
-
-              <CardContent>
-                <Typography gutterBottom variant="h6" component="div">
+              <CardContent >
+                <Typography sx={{fontSize:"14" , fontWeight:"600"}} component="div">
                   {doctor.name}
                 </Typography>
                 <Typography variant="body2" sx={{ color: "text.secondary" }}>

@@ -1,3 +1,4 @@
+import { Typography } from "@mui/material"
 import {
   Box,
   IconButton,
@@ -42,6 +43,9 @@ const AddDoctor = () => {
   };
 
   return (
+    <Typography variant="h5" >Add Doctor</Typography>
+  )
+}
     <Box
       sx={{
         padding: "50px",
