@@ -26,8 +26,7 @@ const AddDoctor = () => {
       experience: "",
     },
   });
-
-  const [url, setUrl] = useState<string | undefined>("");
+  const [url, setUrl] = useState<string>("");
 
   const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
