@@ -6,6 +6,7 @@ import AddDoctor from './components/AddDoctor'
 import DoctorsList from './components/DoctorsList'
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import './App.css'
+import LoginPage from './pages/LoginPage'
 
 const theme = createTheme({
   typography: {
@@ -24,6 +25,7 @@ const App = () => {
           <Route path="add-doctor" element={<AddDoctor />} />
           <Route path="doctors-list" element={<DoctorsList />} />
         </Route>
+        <Route path='login' element={<LoginPage />} />
       </Routes>
       </ThemeProvider>
   )
