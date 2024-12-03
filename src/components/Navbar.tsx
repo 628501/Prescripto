@@ -7,6 +7,7 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 
 import { assets } from "../assets/assets_admin/assets";
+import { Chip } from "@mui/material";
 
 export default function Navbar() {
   return (
@@ -31,18 +32,7 @@ export default function Navbar() {
             }}
           >
             <img src={assets.admin_logo} alt="" style={{ width: "160px" }} />
-            <Typography
-              sx={{
-                marginLeft: "10px",
-                fontSize: "12px",
-                border: "1px solid",
-                borderRadius: "30px",
-                paddingX: "10px",
-                paddingY: "2px",
-              }}
-            >
-              Admin
-            </Typography>
+            <Chip label="Admin" variant="outlined" sx={{marginLeft:"10px"}}/>
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             <Button

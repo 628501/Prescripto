@@ -28,7 +28,7 @@ const rows = [
 export default function Appointments() {
   return (
     <>
-      <Typography variant="h5">All Appointments</Typography>
+      <Typography variant="h6" sx={{marginBottom:"15px"}}>All Appointments</Typography>
       <TableContainer
         component={Paper}
         sx={{ display: { xs: "none", sm: "none", lg: "block", xl: "block" } }}

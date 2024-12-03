@@ -17,6 +17,9 @@ import { useEffect, useState } from "react";
 const drawerWidth = 280;
 
 const Sidebar = () => {
+
+  const [selected, setSelected] = useState<string | undefined>("");
+
   const [selected, setSelected] = useState<string>("");
 
   useEffect(() => {
@@ -47,6 +50,11 @@ const Sidebar = () => {
       >
         <Toolbar />
         <Divider />
+        <List >
+          <Link
+            to="dashboard"
+            style={{ textDecoration: "none", color: "black" }}
+          >
         <List>
           <Link to="dashboard" style={{ textDecoration: "none", color: "black" }}>
             <ListItem
@@ -76,10 +84,10 @@ const Sidebar = () => {
               }}
             >
               <ListItemButton onClick={() => setSelected("appointments")}>
-                <ListItemIcon>
+                <ListItemIcon >
                   <CalendarMonthOutlinedIcon />
                 </ListItemIcon>
-                <ListItemText primary="Appointments" sx={{ color: "gray" }} />
+                <ListItemText  primary="Appointments" sx={{ color: "gray" }} />
               </ListItemButton>
             </ListItem>
           </Link>
