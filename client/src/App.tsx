@@ -18,7 +18,7 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <Navbar />
       <Routes>
-        <Route path='home' element={<Home />}/>
+        <Route path='home' index element={<Home />}/>
         <Route path='all-doctors' element={<AllDoctors />}/>
         <Route path='about' element={<About />}/>
         <Route path='contact' element={<Contact />}/>

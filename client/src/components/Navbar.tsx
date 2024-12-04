@@ -66,6 +66,10 @@ const Navbar = () => {
           </Box>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             <Button
+            disableElevation
+            disableFocusRipple
+            disableRipple
+            disableTouchRipple
               variant="contained"
               sx={{
                 background: "#5F6FFF",
