@@ -62,6 +62,7 @@ export const assets = {
     Avtr1,
     Avtr2,
     Avtr3,
+    doc1
 }
 
 export const specialityData = [
