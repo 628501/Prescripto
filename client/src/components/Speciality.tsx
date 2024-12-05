@@ -22,24 +22,27 @@ const Speciality = () => {
       </Typography>
       <Box sx={{ display: "flex", justifyContent: "center", gap: "30px" }}>
         {specialityData.map((doctor, index) => (
-          <Link to={`/doctor/${doctor.speciality}`}>
-             <Box
-            key={index}
-            sx={{
-              textAlign: "center",
-              transition: "transform 0.3s ease, box-shadow 0.3s ease",
-              "&:hover": {
-                transform: "translateY(-10px)",
-              },
-            }}
-          >
-            <img
-              src={doctor.image}
-              alt={doctor.speciality}
-              style={{ maxWidth: "100%", height: "auto", borderRadius: "8px" }}
-            />
-            <Typography>{doctor.speciality}</Typography>
-          </Box>
+          <Link key={index} to={`/doctor/${doctor.speciality}`}>
+            <Box
+              sx={{
+                textAlign: "center",
+                transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                "&:hover": {
+                  transform: "translateY(-10px)",
+                },
+              }}
+            >
+              <img
+                src={doctor.image}
+                alt={doctor.speciality}
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                  borderRadius: "8px",
+                }}
+              />
+              <Typography>{doctor.speciality}</Typography>
+            </Box>
           </Link>
         ))}
       </Box>
