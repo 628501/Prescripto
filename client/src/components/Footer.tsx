@@ -43,8 +43,7 @@ const Footer = () => {
         <Divider />
         <Box sx={{ textAlign: "center", margin: "20px 0px" }}>
           <Typography variant="body2" color="text.secondary">
-            © {new Date().getFullYear()} Your E-Commerce Store. All rights
-            reserved.
+            © 2024 Your E-Commerce Store. All rights reserved.
           </Typography>
         </Box>
       </Container>
