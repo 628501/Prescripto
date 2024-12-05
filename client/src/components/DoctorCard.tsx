@@ -43,8 +43,8 @@ const DoctorCard: React.FC<DocProps> = ({ doctor }) => {
         <CardMedia
           component="img"
           height="230"
-          image={doctor.image}  // Use doctor image here
-          alt={doctor.name}  // Use doctor name for alt text
+          image={doctor.image}
+          alt={doctor.name}
           sx={{ background: '#EAEFFF' }}
         />
         <CardContent>
