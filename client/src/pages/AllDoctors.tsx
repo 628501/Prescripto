@@ -1,14 +1,5 @@
-import {
-  Box,
-  Button,
-  Card,
-  CardActionArea,
-  CardContent,
-  CardMedia,
-  Container,
-  Typography,
-} from "@mui/material";
-import { useNavigate } from "react-router-dom";
+import { Box, Button, Card, CardActionArea, CardContent, CardMedia, Container, Typography } from "@mui/material";
+import { useNavigate, useParams } from "react-router-dom";
 import { DoctorsFilter } from "../Services/doctorService";
 import { useState, useEffect } from "react";
 import { doctors } from "../assets/assets_frontend/assets";
@@ -25,24 +16,24 @@ const AllDoctors = () => {
 
   const navigate = useNavigate();
   const [filteredDocs, setFilteredDocs] = useState<any>([]);
-  const [update, setUpdate] = useState<string>("");
+  const { speciality } = useParams<{ speciality?: string }>();
 
   const handleNavigation = (specialty: string) => {
-    if (update === specialty) {
-      setUpdate("");
-      setFilteredDocs(doctors);
+    if (specialty === speciality) {
       navigate("/doctor");
     } else {
-      setUpdate(specialty);
-      const filteredDocs = DoctorsFilter(specialty);
-      setFilteredDocs(filteredDocs);
       navigate(`/doctor/${specialty}`);
     }
   };
 
   useEffect(() => {
-    setFilteredDocs(doctors);
-  }, []);
+    if (speciality) {
+      const filteredDocs = DoctorsFilter(speciality);  
+      setFilteredDocs(filteredDocs);
+    } else {
+      setFilteredDocs(doctors);
+    }
+  }, [speciality]);
 
   return (
     <Container maxWidth="xl" sx={{ marginTop: "80px" }}>
@@ -58,14 +49,16 @@ const AllDoctors = () => {
             <Button
               key={index}
               variant="outlined"
+              disableFocusRipple
+              disableTouchRipple
               onClick={() => handleNavigation(specialty)}
               sx={{
                 borderColor: "lightgray",
                 textTransform: "none",
-                color: update === specialty ? "black" : "#4B5563",
+                color: speciality === specialty ? "black" : "#4B5563",
                 minWidth: "200px",
                 justifyContent: "flex-start",
-                backgroundColor: update === specialty ? "#EAEFFF" : "",
+                backgroundColor: speciality === specialty ? "#EAEFFF" : "",
                 textAlign: "left",
                 paddingLeft: "16px",
               }}
