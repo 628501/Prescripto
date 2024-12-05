@@ -1,5 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import { specialityData } from "../assets/assets_frontend/assets";
+import { Link } from "react-router-dom";
 
 const Speciality = () => {
   return (
@@ -21,7 +22,8 @@ const Speciality = () => {
       </Typography>
       <Box sx={{ display: "flex", justifyContent: "center", gap: "30px" }}>
         {specialityData.map((doctor, index) => (
-          <Box
+          <Link to={`/doctor/${doctor.speciality}`}>
+             <Box
             key={index}
             sx={{
               textAlign: "center",
@@ -38,6 +40,7 @@ const Speciality = () => {
             />
             <Typography>{doctor.speciality}</Typography>
           </Box>
+          </Link>
         ))}
       </Box>
     </Box>

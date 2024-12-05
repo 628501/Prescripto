@@ -1,7 +1,8 @@
 import React from 'react';
-import { doctors } from '../assets/assets_frontend/assets';  // Assuming doctors data exists here
+import { doctors } from '../assets/assets_frontend/assets';
 import DoctorCard from './DoctorCard';
 import { Container, Typography, Box, Button } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 const BookDoctor: React.FC = () => {
   return (
@@ -17,15 +18,16 @@ const BookDoctor: React.FC = () => {
           gap: '20px',
         }}
       >
-        {/* Map over doctors array and pass each doctor to DoctorCard */}
         {doctors.slice(0, 10).map((doctor) => (
-          <Box key={doctor._id} sx={{ width: '220px' }}>  {/* Set the width of each item */}
-            <DoctorCard doctor={doctor} />  {/* Pass doctor data as props */}
+          <Box key={doctor._id} sx={{ width: '220px' }}>
+            <DoctorCard doctor={doctor} />
           </Box>
         ))}
       </Box>
       <Box sx={{display:"flex", justifyContent:"center"}}>
+         <Link to="/all-doctors">
          <Button variant='outlined' sx={{marginY:"30px" , padding:"10px 40px" , borderRadius:"25px" , color:"#5F6FFF" , borderColor:"#5F6FFF"}}>More</Button>
+         </Link>
       </Box>
     </Container>
   );

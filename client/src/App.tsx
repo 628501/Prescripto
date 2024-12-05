@@ -24,6 +24,8 @@ const App = () => {
         <Route path='/about' element={<About />}/>
         <Route path='/contact' element={<Contact />}/>
         <Route path='/appointment' element={<Appointement />}/>
+        <Route path='/doctor' element={<AllDoctors/>}/>
+        <Route path='/doctor/:speciality' element={<AllDoctors/>} />
       </Routes>
       <Footer />
     </ThemeProvider>
