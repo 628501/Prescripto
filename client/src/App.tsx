@@ -7,6 +7,7 @@ import Contact from './pages/Contact';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import './App.css'
+import Appointement from './pages/Appointment';
 const theme = createTheme({
   typography: {
     fontFamily:"'Poppins', 'Franklin Gothic Medium', 'Arial Narrow'",
@@ -18,14 +19,11 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <Navbar />
       <Routes>
-        <Route path='home' index element={<Home />}/>
-        <Route path='all-doctors' element={<AllDoctors />}/>
-        <Route path='about' element={<About />}/>
-        <Route path='contact' element={<Contact />}/>
-        <Route path='/home' element={<Home />}/>
+        <Route path='/' element={<Home />}/>
         <Route path='/all-doctors' element={<AllDoctors />}/>
         <Route path='/about' element={<About />}/>
         <Route path='/contact' element={<Contact />}/>
+        <Route path='/appointment' element={<Appointement />}/>
       </Routes>
       <Footer />
     </ThemeProvider>

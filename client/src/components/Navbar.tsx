@@ -9,7 +9,7 @@ import { Container } from "@mui/material";
 import { Link, useLocation } from "react-router-dom";
 
 const menuItems = [
-  { label: "HOME", path: "/home" },
+  { label: "HOME", path: "/" },
   { label: "ALL DOCTORS", path: "/all-doctors" },
   { label: "ABOUT", path: "/about" },
   { label: "CONTACT", path: "/contact" },

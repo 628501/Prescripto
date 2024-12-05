@@ -8,7 +8,7 @@ const Contact = () => {
         <Box sx={{ marginTop: "130px" }}>
           <Typography
             variant="h5"
-            sx={{ color: "#707070", textAlign: "center" }}
+            sx={{ color: "#707070", textAlign: "center" , fontWeight:"500"}}
           >
             CONTACT{" "}
             <span style={{ color: "#374151", fontWeight: "500" }}>US</span>
