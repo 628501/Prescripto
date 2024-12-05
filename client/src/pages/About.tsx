@@ -14,8 +14,8 @@ const title = [{
 }]
 const About = () => {
   return (
-    <Container maxWidth="xl" sx={{marginTop:"100px"}}>
-      <Typography variant="h4" sx={{textAlign:"center" , fontWeight:"500" , color:"gray"}}>ABOUT <span style={{color:"black"}}>US</span></Typography>
+    <Container maxWidth="xl" sx={{marginTop:"130px"}}>
+      <Typography variant="h5" sx={{textAlign:"center" , fontWeight:"500" , color:"gray"}}>ABOUT <span style={{color:"black"}}>US</span></Typography>
       <Box sx={{display:"flex", marginTop:"50px"}}>
         <Box ><img src={assets.about_image} alt="" style={{width:"400px" , textAlign:"center"}} /></Box>
         <Box sx={{display:"flex", flexDirection:"column", gap:"20px" , justifyContent:"center" , width:"870px" , marginLeft:"50px"}}>
@@ -31,12 +31,13 @@ const About = () => {
             title.map((typo,index)=> 
             <Box key={index} sx={{padding:"70px", border:"1px solid #D3D3D3" , rowGap:"10px" ,
               transition:"0.4s ease",
+              color:"GrayText",
               ":hover":{
               background:"#5F6FFF",
               color:"white"
             }}}>
-            <Typography sx={{fontWeight:"600", color:"GrayText"}}>{typo.head}</Typography>
-            <Typography sx={{color:"GrayText"}}>{typo.body}</Typography>
+            <Typography sx={{fontWeight:"600"}}>{typo.head}</Typography>
+            <Typography>{typo.body}</Typography>
           </Box>
 
             )

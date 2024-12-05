@@ -1,5 +1,5 @@
 import React from 'react';
-import { doctors } from '../assets/assets_frontend/assets';  // Assuming doctors data exists here
+import { doctors } from '../assets/assets_frontend/assets';
 import DoctorCard from './DoctorCard';
 import { Container, Typography, Box, Button } from '@mui/material';
 
@@ -17,10 +17,9 @@ const BookDoctor: React.FC = () => {
           gap: '20px',
         }}
       >
-        {/* Map over doctors array and pass each doctor to DoctorCard */}
         {doctors.slice(0, 10).map((doctor) => (
-          <Box key={doctor._id} sx={{ width: '220px' }}>  {/* Set the width of each item */}
-            <DoctorCard doctor={doctor} />  {/* Pass doctor data as props */}
+          <Box key={doctor._id} sx={{ width: '220px' }}>
+            <DoctorCard doctor={doctor} />
           </Box>
         ))}
       </Box>
