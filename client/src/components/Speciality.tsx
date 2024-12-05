@@ -22,12 +22,13 @@ const Speciality = () => {
       </Typography>
       <Box sx={{ display: "flex", justifyContent: "center", gap: "30px" }}>
         {specialityData.map((doctor, index) => (
-          <Link to={`/doctor/${doctor.speciality}`}>
+          <Link style={{textDecoration:"none",color:"black"}} key={index} to={`/doctor/${doctor.speciality}`}>
              <Box
-            key={index}
+            
             sx={{
               textAlign: "center",
               transition: "transform 0.3s ease, box-shadow 0.3s ease",
+              
               "&:hover": {
                 transform: "translateY(-10px)",
               },
