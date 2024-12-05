@@ -41,7 +41,7 @@ const Navbar = () => {
           <Box
             sx={{
               display: "flex",
-              gap: "20px",
+              gap: "10px",
               justifyContent: "center",
               alignItems: "center",
               flexGrow: 1,
